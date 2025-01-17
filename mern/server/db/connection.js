@@ -1,6 +1,6 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
 
-const URI = process.env.ATLAS_URI || "";
+const URI = "mongodb://user:pass@mongodb:27017/merndb?authSource=admin";
 const client = new MongoClient(URI, {
   serverApi: {
     version: ServerApiVersion.v1,
