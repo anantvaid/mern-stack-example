@@ -4,25 +4,12 @@ Mern Stack code for the [Mern Tutorial](https://www.mongodb.com/languages/mern-s
 [![CI](https://github.com/mongodb-developer/mern-stack-example/actions/workflows/main.yaml/badge.svg)](https://github.com/mongodb-developer/mern-stack-example/actions/workflows/main.yaml)
 
 ## How To Run
-Create the file `mern/server/config.env` with your Atlas URI and the server port:
-```
-ATLAS_URI=mongodb+srv://<username>:<password>@sandbox.jadwj.mongodb.net/
-PORT=5050
+```bash
+docker compose up
 ```
 
-Start server:
-```
-cd mern/server
-npm install
-npm start
-```
-
-Start Web server
-```
-cd mern/client
-npm install
-npm run dev
-```
+- If you are running on local, edit the IP code in the client JS files to localhost.
+- If you are running on any Cloud based environment, edit the IP in the client JS files.
 
 ## Disclaimer
 
