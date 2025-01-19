@@ -1,0 +1,44 @@
+version: "3.8"
+
+services:
+  frontend-app:
+    build:
+      context: ./client/
+      dockerfile: Dockerfile
+    container_name: frontend-app
+    ports:
+      - "80:80"
+    networks:
+      - mern-nw
+
+  backend:
+    build:
+      context: ./server/
+      dockerfile: Dockerfile
+    container_name: backend-app
+    ports:
+      - "5050:5050"
+    networks:
+      - mern-nw
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:6.0.20
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: user
+      MONGO_INITDB_ROOT_PASSWORD: pass
+    networks:
+      - mern-nw
+    volumes:
+      - mongodb-data:/data/db
+
+networks:
+  mern-nw:
+    driver: bridge
+
+volumes:
+  mongodb-data:
