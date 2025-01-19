@@ -8,8 +8,8 @@ Mern Stack code for the [Mern Tutorial](https://www.mongodb.com/languages/mern-s
 docker compose up
 ```
 
-- If you are running on local, edit the IP code in the client JS files to localhost.
-- If you are running on any Cloud based environment, edit the IP in the client JS files.
+- If you are running on local, no edits required, the app should run just fine.
+- If you are running on any Cloud based environment, edit the code in the client JS files from localhost to the instance IP.
 
 ## Disclaimer
 
