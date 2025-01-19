@@ -1,11 +1,9 @@
 ### STAGE 1: Build ###
-FROM node:lts-alpine as build
-
-ENV NODE_ENV=production
+FROM node:lts-alpine AS build
 
 WORKDIR /usr/src/app
 
-COPY ["package.json", "package-lock.json*"]
+COPY ["package.json", "package-lock.json*", "./"]
 
 RUN npm install
 
