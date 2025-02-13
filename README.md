@@ -45,13 +45,13 @@ This will:<br/>
 To stop all services:
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
 To remove containers including database volumes:
 
 ```bash
-docker-compose down -v
+docker compose down -v
 ```
 
 ## 📖 Blog Post
